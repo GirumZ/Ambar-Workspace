@@ -34,3 +34,134 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# =========================
+# 🐍 Python Core
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =========================
+# 🌿 Virtual Environments
+# =========================
+venv/
+env/
+ENV/
+.venv/
+
+# =========================
+# 🔐 Environment Variables & Secrets
+# =========================
+.env
+.env.*
+*.env
+*.secret
+*.key
+
+# =========================
+# 🧠 Django Specific
+# =========================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# =========================
+# 📦 Migrations (Optional - usually DO NOT ignore)
+# =========================
+# */migrations/*
+# !*/migrations/__init__.py
+
+# =========================
+# 🧪 Testing & Coverage
+# =========================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# =========================
+# 🧰 IDEs & Editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# 🖥️ OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# ⚙️ Node / Next.js (if frontend exists)
+# =========================
+node_modules/
+.next/
+out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# 📁 Static / Build Artifacts
+# =========================
+static/
+assets/
+
+# =========================
+# 🔥 Deployment / Server
+# =========================
+*.pem
+*.crt
+*.csr
+gunicorn.log
+
+# =========================
+# 🐳 Docker (if used)
+# =========================
+*.pid
+*.seed
+*.pid.lock
+
+# =========================
+# 📦 Package Managers
+# =========================
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =========================
+# 🧾 Misc
+# =========================
+*.bak
+*.tmp
+*.orig
