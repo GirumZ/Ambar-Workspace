@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { CircleUser, UserPlus, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,25 +27,40 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="font-bold text-2xl tracking-tighter text-foreground">
-              <span className="text-white">ambar.</span><span className="text-accent"> Workspace</span>
+              <span className="text-accent">ambar. Workspace</span>
             </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#home" className="text-secondary hover:text-primary font-medium transition-colors">
+            <Link href="#home" className="text-accent hover:text-primary font-medium transition-colors">
               Home
             </Link>
-            <Link href="#pricing" className="text-secondary hover:text-primary font-medium transition-colors">
+            <Link href="#pricing" className="text-accent hover:text-primary font-medium transition-colors">
               Pricing
             </Link>
-            <Link href="#contact" className="text-secondary hover:text-primary font-medium transition-colors">
+            <Link href="#contact" className="text-accent hover:text-primary font-medium transition-colors">
               Contact
             </Link>
             <Link
-              href="#pricing"
-              className="bg-primary hover:bg-foreground text-background px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              href="/signin"
+              className={`flex item-center gap-2 font-medium transition-colors ${isScrolled
+                ? "text-foreground hover:text-accent"
+                : "text-background hover:text-accent/80"
+                }`}
             >
-              Book Now
+              <CircleUser size={20} strokeWidth={2} />
+              <span>Log In</span>
+            </Link>
+
+            <Link
+              href="/signup"
+              className={`flex item-center gap-2 font-medium transition-colors ${isScrolled
+                ? "text-foreground hover:text-accent"
+                : "text-background hover:text-accent/80"
+                }`}
+            >
+              <UserPlus size={20} strokeWidth={2} />
+              <span>Sign Up</span>
             </Link>
           </div>
 
@@ -72,13 +87,20 @@ export default function Navbar() {
             <Link href="#contact" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-foreground hover:bg-accent/10">
               Contact
             </Link>
-            <div className="mt-4 px-3">
+            <div className="mt-4 px-3 flex flex-col gap-3">
               <Link
-                href="#pricing"
+                href="/signin"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block w-full text-center border border-secondary/30 text-foreground hover:bg-accent/10 px-6 py-3 rounded-xl font-medium transition-all"
+              >
+                Sign In
+              </Link>
+              <Link
+                href="/signup"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block w-full text-center bg-primary hover:bg-foreground text-background px-6 py-3 rounded-xl font-medium shadow-md"
               >
-                Book Now
+                Sign Up
               </Link>
             </div>
           </div>
