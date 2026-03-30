@@ -4,7 +4,7 @@ export default function PricingSection() {
   const plans = [
     {
       name: "Hot Desk",
-      price: "$15",
+      price: "400 Br",
       period: "/ day",
       description: "Perfect for freelancers and nomads who need a flexible workspace.",
       availability: { status: "green", text: "8 desks available" },
@@ -14,7 +14,7 @@ export default function PricingSection() {
     },
     {
       name: "Designated Desk",
-      price: "$150",
+      price: "8,000 Br",
       period: "/ month",
       description: "A permanent desk you can call your own. 24/7 access.",
       availability: { status: "yellow", text: "Only 2 left" },
@@ -24,7 +24,7 @@ export default function PricingSection() {
     },
     {
       name: "Private Office",
-      price: "$450",
+      price: "18,630 Br",
       period: "/ month",
       description: "A fully furnished office for small teams of up to 4 people.",
       availability: { status: "red", text: "Join waitlist" },
@@ -34,7 +34,7 @@ export default function PricingSection() {
     },
     {
       name: "Meeting Room",
-      price: "$25",
+      price: "400 Br",
       period: "/ hour",
       description: "Professional environment to host your clients and team meetings.",
       availability: { status: "green", text: "Available today" },
@@ -61,8 +61,8 @@ export default function PricingSection() {
             <div
               key={index}
               className={`relative bg-background rounded-3xl p-8 flex flex-col shadow-sm transition-all duration-300 hover:shadow-2xl border ${plan.popular
-                  ? "border-accent shadow-accent/10 scale-105 z-10"
-                  : "border-secondary/20 hover:border-accent/40"
+                ? "border-accent shadow-accent/10 scale-105 z-10"
+                : "border-secondary/20 hover:border-accent/40"
                 }`}
             >
               {plan.popular && (
@@ -79,7 +79,7 @@ export default function PricingSection() {
               </div>
 
               <div className="mb-6 flex items-baseline text-foreground">
-                <span className="text-5xl font-extrabold tracking-tight">{plan.price}</span>
+                <span className="text-3xl font-extrabold tracking-tight">{plan.price}</span>
                 <span className="text-xl text-secondary ml-1">{plan.period}</span>
               </div>
 
@@ -87,8 +87,8 @@ export default function PricingSection() {
               <div className="mb-8 flex items-center bg-accent/10 py-2 px-3 rounded-lg w-fit">
                 <div className="flex items-center space-x-2">
                   <span className={`h-2.5 w-2.5 rounded-full ${plan.availability.status === "green" ? "bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]" :
-                      plan.availability.status === "yellow" ? "bg-yellow-500 shadow-[0_0_8px_rgba(234,179,8,0.6)]" :
-                        "bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.6)]"
+                    plan.availability.status === "yellow" ? "bg-yellow-500 shadow-[0_0_8px_rgba(234,179,8,0.6)]" :
+                      "bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.6)]"
                     }`}></span>
                   <span className="text-sm font-medium text-secondary">{plan.availability.text}</span>
                 </div>
@@ -105,8 +105,8 @@ export default function PricingSection() {
 
               <button
                 className={`w-full py-4 rounded-xl font-semibold transition-all ${plan.popular || plan.availability.status === "red"
-                    ? "bg-primary hover:bg-foreground text-background shadow-md hover:shadow-lg hover:-translate-y-0.5"
-                    : "bg-accent/10 text-primary hover:bg-accent/20"
+                  ? "bg-primary hover:bg-foreground text-background shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                  : "bg-accent/10 text-primary hover:bg-accent/20"
                   }`}
               >
                 {plan.buttonText}

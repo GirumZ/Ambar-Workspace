@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { Send } from "lucide-react";
 
 export default function CTASection() {
   return (
@@ -29,8 +29,8 @@ export default function CTASection() {
             href="#"
             className="w-full sm:w-auto inline-flex justify-center items-center bg-primary/60 hover:bg-primary/80 text-background border border-accent/30 hover:border-accent/60 px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:-translate-y-1"
           >
-            <MessageCircle className="mr-2 h-5 w-5" />
-            WhatsApp Us
+            <Send className="mr-2 h-5 w-5" />
+            Telegram Channel
           </a>
         </div>
       </div>
