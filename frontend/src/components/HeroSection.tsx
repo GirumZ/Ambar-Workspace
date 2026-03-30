@@ -39,7 +39,7 @@ export default function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Link
-              href="#pricing"
+              href="/booking"
               className="inline-flex justify-center items-center bg-accent hover:bg-accent/80 text-foreground px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg transform hover:-translate-y-1"
             >
               Book Now
